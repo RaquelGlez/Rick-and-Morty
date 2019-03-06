@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import AbstractCharacter from './AbstractCharacter'
-import DetailCharacter from './DetailCharacter'
 import '../App.css';
 
 
@@ -32,17 +31,14 @@ class CharacterData extends Component {
         }));
     }
   
-    
-  
     render() {
-      console.log()
+    
       const { items } = this.state;
       console.log(items)
       
-  
-      
-  
+     
       return (
+        
         <div>
           <div className="container" >
             {
@@ -53,31 +49,11 @@ class CharacterData extends Component {
                   name = {item.name} 
                   image = {item.image} 
                   status = {item.status}
-                  species = {item.species}
-                  tipo = {item.type}
-                  gender= {item.gender}
-                  origin= {item.origin.name}/>
+                  />
                  )
                 )
               }
             </div>
-            {/* <div>
-            {
-              items.map(item => (
-                <DetailCharacter
-                  key = {item.id} 
-                  id = {item.id} 
-                  name = {item.name} 
-                  image = {item.image} 
-                  status = {item.status}
-                  species = {item.species}
-                  tipo = {item.type}
-                  gender= {item.gender}
-                  origin= {item.origin.name}/>
-                 )
-                )
-              }
-            </div> */}
         </div>
       );  
     }  

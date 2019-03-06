@@ -2,4 +2,7 @@
   text-align: center;
 }
 
-
+.card {
+  display: inline-flex;
+  width: 20rem;
+}
